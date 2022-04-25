@@ -1,6 +1,6 @@
 package srnGui;
 import buttonHandling.CreateAccount;
-
+import buttonHandling.UserPage;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -53,7 +53,9 @@ public class Main extends Application{
                 createAccountButton);
         rootLayout.getChildren().addAll(vBox);
         
-        CreateAccount.setOnAction(createAccountButton);       
+        CreateAccount.setOnAction(createAccountButton);  //initialisiert die Handler Methode des übergebenen Objects
+        UserPage.setOnAction(loginButton);
+        
     }
     
     public static Stage getMainStage() {
