@@ -1,0 +1,15 @@
+Video: https://www.youtube.com/watch?v=fx7-bEm0jT0 
+-> USE POSTGRES INSTEAD OF HIS MYSQL
+
+
+OR INSTRUCTION:
+1. Go to Help-> install new software:
+	paste https://ci.eclipse.org/datatools/job/org.eclipse.datatools_master/lastSuccessfulBuild/artifact/site/target/repository/
+	in "work with" and press enter: install all dependencies
+	
+2. Restart after installation to take effect
+
+3. Window -> Perspektive -> other -> Database Development -> Postgresql
+	Download postgresql-42.2.20.jar from https://jdbc.postgresql.org/download.html and set as jdbc driver, set path of downloaded driver.jar
+	type in your database name and login stuff -> FINISH
+	
