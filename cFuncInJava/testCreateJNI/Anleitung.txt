@@ -1,0 +1,20 @@
+1. Eine Java Datei mit native-method erstellen
+2. Eine .h Datei aus der Java-Klasse generieren
+ -> javac -h . JNIHello.java
+3. Die Dateien hello.h & hello.cpp händisch erstellen
+4. Eine cpp Datei (JNIHello.cpp) erstellen die hello.cpp aufruft
+5. Den LIB-Path konfigurieren
+ -> export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<Pfad zum Ordner mit der Datei>
+6. hello.cpp kompilieren und hello.o lib erstellen
+ -> g++ -c -O2 -Wall -fPIC -I /usr/lib/jvm/java-11-openjdk-amd64/include -I /usr/lib/jvm/java-11-openjdk-amd64/include/linux hello.cpp -o hello.o
+7. die JNIHello.cpp Datei kompilieren und daraus zsm. mit hello.o die lib JNIHello.so generieren
+ -> g++ -shared -O2 -Wall -fPIC -I /usr/lib/jvm/java-11-openjdk-amd64/include -I /usr/lib/jvm/java-11-openjdk-amd64/include/linux JNIHello.cpp hello.o -o libjnihello.so
+8. Die Java Datei ausführen
+ -> java JNIHello
+
+
+Hinweise:
+- Der package-Name darf nicht in der Java-Datei stehen.
+- Wenn ohne das -c Flag Schritt 7 ausführt muss die entsprechende cpp Datei über die Main methode verfügen
+- In Schritt 7 muss das shared-flag gesetzt werden! sonst:
+-> cannot dynamically load position-independent executable
