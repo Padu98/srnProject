@@ -1,3 +1,6 @@
+package start;
+
+import srnGui.Main;
 
 public class JNIHello {
 	static {
@@ -7,6 +10,7 @@ public class JNIHello {
 	public static void main(String []args) {
 		System.out.println("Hallo");
 		helloJNI();
+		Main.main(args);
 	}
 	
 	public static native void helloJNI();

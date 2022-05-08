@@ -22,7 +22,6 @@ public class UserPage {
 	private static ArrayList<HBox> hboxList;
 
 	public static void setOnAction(Button button) {
-
 		button.setOnAction(event -> {
 			if(UserPage.validateLogin()) {
 				Button cancelButton = new Button("LOGOUT");

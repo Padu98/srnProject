@@ -1,5 +1,6 @@
 package buttonHandling;
 
+//import bla.JNIHello;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
@@ -10,12 +11,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import srnGui.Main;
+import start.JNIHello;
 
 public class CreateAccount {
-	
+
 	public static void setOnAction(Button button) {
-		
+
 		button.setOnAction(event -> {
+			System.out.println("Java: create account action detected!");
+			JNIHello.helloJNI();
+
 			Button createAccountButton = new Button("CREATE ACCOUNT");
 			Button cancelButton = new Button("CANCEL");
 			VBox vBox = new VBox();

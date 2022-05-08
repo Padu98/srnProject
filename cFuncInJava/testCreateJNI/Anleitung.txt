@@ -14,7 +14,6 @@
 
 
 Hinweise:
-- Der package-Name darf nicht in der Java-Datei stehen.
 - Wenn ohne das -c Flag Schritt 7 ausführt muss die entsprechende cpp Datei über die Main methode verfügen
 - In Schritt 7 muss das shared-flag gesetzt werden! sonst:
 -> cannot dynamically load position-independent executable
